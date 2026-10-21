@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="黄信达的空间、装置与数字艺术作品集预览。">
+  <title>XD - Portfolio Preview</title>
+  <link rel="preload" as="image" href="assets/project-aranya.webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <a class="identity" href="#" aria-label="XD 作品集首页">
+        <span>HUANG XINDA</span>
+        <span>DESIGNER / ARTIST</span>
+      </a>
+      <nav aria-label="主要导航">
+        <a href="#work">项目</a>
+        <a href="about.html">关于</a>
+      </nav>
+      <p class="edition">PORTFOLIO<br>2021-2026</p>
+    </header>
+
+    <section class="stage" id="work" aria-labelledby="stage-title">
+      <h1 id="stage-title" class="sr-only">黄信达作品集</h1>
+
+      <div class="brand-mark" aria-hidden="true">XD</div>
+
+      <div class="project-meta" aria-live="polite">
+        <span class="project-meta__index">01 / 10</span>
+        <p class="project-meta__title">阿那亚戏剧节</p>
+        <p class="project-meta__type">PUBLIC ART</p>
+      </div>
+
+      <div class="cube-wrap">
+        <div class="scene" aria-label="由项目图片组成的交互魔方">
+          <div class="cube" id="cube"></div>
+        </div>
+        <p class="hint">悬停项目名称，查看对应作品</p>
+      </div>
+
+      <aside class="rail" aria-label="项目分类">
+        <div class="rail__fade rail__fade--top"></div>
+        <div class="rail__track" id="project-track"></div>
+        <div class="rail__fade rail__fade--bottom"></div>
+      </aside>
+    </section>
+
+    <footer>
+      <p>视觉设计 / 空间叙事 / 数字影像</p>
+      <p>SELECTED WORKS</p>
+    </footer>
+  </main>
+  <script src="project-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

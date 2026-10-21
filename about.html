@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="黄信达，公共艺术、空间与平面设计师。">
+  <title>关于黄信达 | XD</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <main class="about-page">
+    <header class="about-header">
+      <a href="index.html" aria-label="返回作品集首页">XIAN / XD</a>
+      <span>关于</span>
+      <a href="index.html#work">项目 ↗</a>
+    </header>
+
+    <h1 id="name">
+      <span class="name-label"><span>XIAN-</span><span>黄信达-</span><span>XD</span></span>
+      <span class="name-blur-lens" aria-hidden="true"></span>
+    </h1>
+
+    <section class="contact-field" aria-label="联系方式">
+      <a class="contact contact--mail" href="mailto:2933426354@qq.com">
+        <span>邮箱</span>
+        <strong>2933426354@qq.com</strong>
+      </a>
+
+      <div class="contact contact--wechat">
+        <span>微信</span>
+        <strong>qituourqqpq</strong>
+      </div>
+
+      <a class="contact contact--phone" href="tel:18579741101">
+        <span>电话</span>
+        <strong>185 7974 1101</strong>
+      </a>
+
+      <div class="contact contact--practice">
+        <span>职业方向</span>
+        <strong>公共艺术 / 空间设计师 / 平面设计师</strong>
+      </div>
+    </section>
+
+    <p class="availability">开放合作与项目委托</p>
+  </main>
+  <script>
+    const name = document.querySelector("#name");
+
+    if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      name.addEventListener("pointermove", (event) => {
+        const bounds = name.getBoundingClientRect();
+        name.style.setProperty("--pointer-x", `${event.clientX - bounds.left}px`);
+        name.style.setProperty("--pointer-y", `${event.clientY - bounds.top}px`);
+      });
+      name.addEventListener("pointerenter", () => name.classList.add("is-hovered"));
+      name.addEventListener("pointerleave", () => name.classList.remove("is-hovered"));
+    }
+  </script>
+</body>
+</html>

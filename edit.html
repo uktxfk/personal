@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>内容编辑 | XD</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <header class="editor-header">
+    <div>
+      <strong>XD CONTENT</strong>
+      <span>本地内容编辑</span>
+    </div>
+    <a href="index.html">返回网站 ↗</a>
+  </header>
+
+  <main class="editor-shell">
+    <aside class="project-panel" aria-label="选择项目">
+      <p class="panel-label">项目</p>
+      <div id="project-selector"></div>
+    </aside>
+
+    <section class="form-panel">
+      <div class="form-heading">
+        <div>
+          <p class="panel-label">编辑文案</p>
+          <h1 id="editor-title">项目内容</h1>
+        </div>
+        <span id="media-count"></span>
+      </div>
+
+      <form id="content-form">
+        <label>
+          <span>项目名称</span>
+          <input id="project-name" name="name" autocomplete="off" required>
+        </label>
+        <label>
+          <span>项目类别</span>
+          <input id="project-type" name="type" autocomplete="off" required>
+        </label>
+        <label class="wide-field">
+          <span>项目简介</span>
+          <textarea id="project-description" name="description" rows="6" required></textarea>
+        </label>
+        <label class="wide-field">
+          <span>设计署名</span>
+          <input id="project-designer" name="designer" autocomplete="off" required>
+        </label>
+      </form>
+
+      <section class="detail-copy-section" aria-labelledby="detail-copy-title">
+        <div class="detail-copy-heading">
+          <div>
+            <p class="panel-label">详情卡片</p>
+            <h2 id="detail-copy-title">卡片图片与文案</h2>
+          </div>
+          <div class="detail-copy-tools">
+            <span>顺序与详情页一致</span>
+            <button id="add-images" type="button">新增图片卡片</button>
+            <input id="image-input" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
+          </div>
+        </div>
+        <div id="detail-copy-list"></div>
+      </section>
+
+      <div class="editor-actions">
+        <button class="primary-action" id="save-draft" type="button">保存草稿</button>
+        <button id="save-folder" type="button">写入网站文件夹</button>
+        <button id="preview-project" type="button">预览当前项目 ↗</button>
+        <button id="download-file" type="button">下载发布文件</button>
+      </div>
+
+      <p class="status" id="editor-status" role="status">修改后先保存草稿，再预览确认。</p>
+      <p class="editor-note">“保存草稿”只在当前浏览器生效；“写入网站文件夹”会永久更新本地网站，请选择 portfolio-preview\dist 文件夹。</p>
+    </section>
+  </main>
+
+  <script src="project-data.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>
